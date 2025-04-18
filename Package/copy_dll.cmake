@@ -1,6 +1,0 @@
-file(GLOB_RECURSE Boost_DLLs "${CMAKE_CURRENT_LIST_DIR}/lib/*.dll")
-foreach(Boost_DLL ${Boost_DLLs})
-    get_filename_component(Boost_DLL_name "${Boost_DLL}" NAME)
-    string(REGEX REPLACE "-vc.*[.]" "." Boost_DLL_name_clean "${Boost_DLL_name}")
-    execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different "${Boost_DLL}" "${CopyPath}/${Boost_DLL_name_clean}")
-endforeach()
