@@ -10,6 +10,6 @@ if(NOT EXISTS "${CMAKE_BINARY_DIR}/boost-${BOOST_VERSION}")
     add_custom_target(
         zip_boost ALL
         COMMAND ${CMAKE_COMMAND} -E tar cfv "${CMAKE_BINARY_DIR}/${PACKAGE_NAME}" --format=zip .
-        WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/boost-${BOOST_VERSION}"
+        WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/boost-${BOOST_VERSION}/boost"
     )
 endif()
